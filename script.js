@@ -2,18 +2,19 @@
 
     var start_stop_status = "stop";
 
-self.onInit = function() {
-    //console.log(self.ctx.defaultSubscription.data)
-    //self.ctx.$scope.data = self.ctx.defaultSubscription.data;
-    self.ctx.$scope.data =  array();
+    function onInit() {
+        //console.log(self.ctx.defaultSubscription.data)
+        //self.ctx.$scope.data = self.ctx.defaultSubscription.data;
+        var data =  getData();
+        console.log(data);
+        $(".bg_load").fadeOut(2000);
 
-    $(".bg_load").fadeOut(2000);
+        showAutoData();
 
+        //self.onResize();
+    }
+    onInit();
     showAutoData();
-
-    self.onResize();
-}
-
 
     $(document).on('click', '#auto', function(e) {
         auto();
@@ -62,6 +63,22 @@ self.onResize = function() {}
 self.onDestroy = function() {
 
 }
+
+function getData(){
+
+    var  prevValue = 32;
+    var value = prevValue + Math.random() * 100 - 50;
+    var multiplier = Math.pow(10, 2 || 0);
+    var value = Math.round(value * multiplier) / multiplier;
+    if (value < -1000) {
+        value = -1000;
+    } else if (value > 1000) {
+        value = 1000;
+    }
+    return value;
+}
+
+
 
 function showAutoData() {
     $("#auto_data").show();
