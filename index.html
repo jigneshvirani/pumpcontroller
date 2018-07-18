@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <!-- begin::Head -->
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="Latest updates and statistic charts">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                   <div class="row div_btm_border">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <img alt="Logo" class="img-responsive" width="75px;" src=" data:image/png;base64,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">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h5><span style="float: right; padding-top: 13px; font-weight: 600; color: #C0C0C0;" id="time_id">{{data[0].data[0][1]}}</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div id="auto_data" style="display: none;">
+                       <div class="row" id="result_title" style="padding-bottom: 10px; padding-left: 10px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img alt="Auto" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAmCAYAAAA1MOAmAAAACXBIWXMAAAsSAAALEgHS3X78AAAF+klEQVRYw+2VeVATZxTA3+4GQkDwAOVQDI4SiTrVirejrhyiVUe86gHqH63jVQ/qMcWpx1ir0yke9Sh27Gg9xo0oAkLEA4KItoIIKkq4REPkiCBqSJZNstnXP2ooVSKC1r98M29mv/2O3/ve+957BCJCa2LkOXFlY52HzLVHJbyHiOxN7CqKWwMAsMAv9MSsG1vjOzm4vDg/dkf4+8BIexMISK67E7vHJ2lWdVbtvXH+rj1K4D3FLmyRX9gxEkjeioIDAIBCo5p3sDRhGS9YqQ8KY3mT0+wbW+MEEJrcXMU96779wcnvSxq0/h8UpmFrpA6kiF/hH76/q7iTDgBQM1XhWx0e371fR7+ig6WJS/xTIosPlZ1f3CYaIjaprvG5e/MxIsLPakWUb9KXj2zjPUVnVgBDC8DQODD1q7zX179Nmz5mX996ChhaCFGtvfhn7f1htv+NvMkxr75kICLCL0Vnl9tAwNA4JTM6sS2wJjfmPS8JBAAiTXc7bFTaNzcnZ36XnFtfPNiJcjR/3tn/7r6Sc8tX5x844EBQli+8h58HAOjr6lvcrpgt6zMtFgDAReSk9xR3rrlQnT1l6OWludOzNp3dXHB0y+q8/ftFBMUzozbPkbn6lgEAyN16FrUrZkZLo8QrYUYlMLRwpTqX/qnw1FqPc9N0NpeJFMHmMxVXZyAiTMzYoASGxqyn90a2K2avgr8SGBonZKxLRUTQm40uP9w/Hj3y8vLrCdqsqbZ10qQ55cDQQh33snO7YSzPiX0SZ1UAQwv2rGZ5Tkww463i06HsY0ONb7seCACAhBKbNvaL2AEAxLb7x7a0WEwJyuojca80CRaJTBlZsiJ3775Kts67XUlNAoEAALfqi4e0tMGBFPG5Yb8FrpLN3EMCib+WJa3so4woi8o7GKPj6ru+c1IfLktZRDDjeUoRZGEep89uzS1a41OfpTm7DzgoQjhgaHSOC2vYX3xumb31hK2fHSm/sPDrnJgjJEHg8RHRC+ZLQxT2DNRx9V0LX2rkRfoKuVpfEZCmux2i1msGAAC4O7rV1s1I6ma3nzUDCSdGbIycJw2Os6KVfGzUSUUExUtdPLW2DYtzYmJ/L1cuAQDidSd5O3WpWiWbudeekUR8ReboWTe2ZiIgNahTn9syV98StV4jL2nQ9jUJFglFkHza+F1BdLdBWVYUiA5nJhk4wewMADCvZ/DJEK/ANLlbzyK5m1TdybGD/q0P5NyTrLEISAEA3HlRFhinzZhX8LJ8EEkQQi8X7zIrCqLou4d3AgBojDXSVyAEAMiuV48I9hycPtKjf3ZrIAAA0fqAuQq9hR3mIXZ7JneTquVuUrW8o1Tt5+L1GBFJ+YVFhTefFY5OrcqegIAkAMC07qMTTFaz+GLNrcnjVVEZV4P20j1dulW2qcW0pH+UX4wEhsahl5b+FaM+vQYYGrcUHN3E8pw4LGO9EhgaeyfPL64w6nzeuYLUci+6aAw1PRARcurUgyde3ZCMiGCx8pR/SqTadigwNNrSguU5cahqXaptTmt86v1OFSRee21Gn5SIhwtv7jgadnX9lXJDdW8AABFJWTf3X7gNAOChoUrWvNpLKLEpccz26SGegZceGqpkQaoo1RO21rtVNxosjRLPhOlVtiofoFz44JGh2hcRgRespFy5qAAYGilFkJnlOXFzi40WzilEtfYiMDT6J0eo7d2w6WZFek2AyWoR/zuu6NdXuaA0XpsZThGkcGhI1LIBHXvdjZZH7JBQYlNzg51FYi5pzI/hwZ6DL5caKgOCVN+qqhrrvN7IM0QEi8BT3okzq+vNeneSIAUrCqKZPcbGTfIZnjrFZ6TS06lz7bsUWpbnJFOvbUxSPc0Plbn6qjOCdgf5SDxq3nCj+qXG/4XZ4BqjVqwBhsb8+tLP2tI+moeDTl+TBgyNfVMWFFaxdZ4t9jPb4rk3tp3geLNje2D/nME6j0tfnW6LfSVb59Ui7ENpg4V1Hpu2SgUMjYtzYmL/VxgiQoOZdVmXH7vTaOGc/tNiPoaQ8BHlE+wT7K3yNzkhatd8IPD0AAAAAElFTkSuQmCC"></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Auto Mode</b></span>
+                            </div>
+                       </div>
+                       <div class="row div_btm_border" id="result" style="margin-bottom: 2px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 154px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="result_div_box">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50;padding-left: 20px;">QUARTS</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 0px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px"><b>
+                                                    <span id="quantity" style="font-size: 75px;">{{data[4].data[0][1]}}</span><span></span>
+                                                </b>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle auto-plus" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle auto-minus" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-9 col-md-9 col-sm-9">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="auto_start_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #4CAF50; margin-bottom: 20px; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-triangle-right"></span><span id="auto_start_spn" style="padding-left:10px;">Start</span>
+                                            </button> 
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="auto_stop_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #ffffff; background-color: #ff3232; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-stop"></span>
+                                            <span id="auto_stop_spn" style="padding-left:10px;">Stop</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div id="on_off_data" style="display: none;">
+                       <div class="row" style="padding-bottom: 10px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img alt="On/Off" class="img-responsive" style="float: left; padding-top:5px;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAASCAYAAAA31qwVAAAACXBIWXMAAAsSAAALEgHS3X78AAAByElEQVRIx82WP0sbYRzHP3eQKUKSpQgRKjTgEuhtHUzJnW+gN3S4qV7fQZw6qpuTBF9AvWy3CLFd7OLdgQ4uJUImmzYRCUaH5jS5JR0el6OcVlHzROl3fP78+PD8+X5/ihCCpBTXyAI2YAJlJKTlCmRTU7fOdaIenagXAHXAEZYXXuNIgimuoQMO8HJcGP2FRmXuPe/y8/euPY7OcNo7bBxtnfweDT4Iy/P/AVNcwwY2ZU5opWizXFx89L6LPxH6boVGv/VRWJ7zF0xxDQ3wgcxzQyXhFnaXht/7P94Ky2uo8XhVBkrLFaSgADKpNJ/ffJqKWVDj0yrLXuEk9Dr7CnOmVFZcQ1Pj3yelhzz0h8rMlwB0VbaQliswSc2mpwGy0mB3+ZSsVP5TSYM1wtaTgXVkCoSjIcfR2cSA6t09gI4aZ9WFTDGnvTMxsC/d/QFQV+PwrEr5WNPhMPwpDbXarPFreLouLC9MZqUvY7RaroC/UCWTSo+1v9b+hn2wFgjL028+fhMIxv4E/RazXy2C88NHZ+Rqs4Z9sBYkzV65pR+rACuy2WnmS/f2Y/55g+3u/mV/NFgWlle9sx+7AagD+hPblZ/swZK6AiLDshsenzUfAAAAAElFTkSuQmCC"></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>On/Off Mode</b></span>
+                            </div>
+                       </div>
+                       <div class="row div_btm_border" style="margin-bottom: 2px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 16%;">
+                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                        <div class="result_div_box">
+                                           <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50;padding-left: 20px;"><b>On</b></h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 10px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px;">
+                                                    <div class="row">
+                                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                                            <b>
+                                                                <span id="on_off_id_value" style="font-size: 75px;">1</span>
+                                                            </b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                           <b><span style="font-size: 17px;">seconds</span></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle on_off-plus" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle on_off-minus" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3" style="padding-left: 35px;">
+                                        <div class="result_div_box">
+                                           <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50;padding-left: 20px;"><b>Off</b></h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 10px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px;">
+                                                    <div class="row">
+                                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                                            <b>
+                                                                <span id="on_off_id_value_second" style="font-size: 75px;">1</span>
+                                                            </b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                           <b><span style="font-size: 17px;">seconds</span></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle on_off-plus_second" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle on_off-minus_second" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="on_off_start_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #4CAF50; margin-bottom: 20px; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-triangle-right"></span><span id="on_off_start_spn" style="padding-left:10px;">Start</span>
+                                            </button> 
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="on_off_stop_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #ffffff; background-color: #ff3232; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-stop"></span>
+                                            <span id="on_off_stop_spn" style="padding-left:10px;">Stop</span>
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+             
+                    <div id="batch_data" style="display: none;">
+                       <div class="row" style="padding-bottom: 1px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC"></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Batch Mode</b></span>
+                            </div>
+                       </div>
+                        <div class="row" style="padding-bottom: 3px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <span style="padding-left: 28%">Repeat every</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 7px;">
+                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                        <div class="result_div_box">
+                                           <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50; padding-left: 20px;"><b>QUARTS</b></h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 3px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px;">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: -18px;">
+                                                            <b>
+                                                                <span id="batch_id_value" style="font-size: 75px;">1</span>
+                                                            </b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle batch-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle batch-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-lg-3 col-md-3 col-sm-3" style="padding-left: 35px;">
+                                        <div class="result_div_box">
+                                           <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50; padding-left: 20px;"><b>days</b></h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 3px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: -18px;">
+                                                            <b>
+                                                                <span id="batch_id_value_second" style="font-size: 75px;">1</span>
+                                                            </b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle batch-plus_second" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle batch-minus_second" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="batch_start_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #4CAF50; margin-bottom: 20px; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-triangle-right"></span><span id="batch_start_spn" style="padding-left:10px;">Start</span>
+                                            </button> 
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="batch_stop_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #ffffff; background-color: #ff3232; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-stop"></span>
+                                            <span style="padding-left:10px;" id="batch_stop_spn">Stop</span>
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="padding-bottom: 3px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <span style="padding-left: 140px;"><b>Date</b></span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <span style="padding-left: 135px;"><b>Time</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row div_btm_border" style="padding-bottom: 3px; padding-left: 10px; margin-bottom: -2px;">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <span class="data-dwn">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle month-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div style="margin-left: 15px; background-color: #D9EBE5; border-radius: 5px; width: 100px; height: 50px">
+                                                    <center style="padding-top: 11px;">
+                                                        <b><span id="month_id_value" style="font-size: 15px">January</span></b>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle month-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: -25px;">
+                                 <span class="data-dwn">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle day-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div style="background-color: #D9EBE5; border-radius: 5px; width: 50px; height: 50px">
+                                                    <center style="padding-top: 11px;">
+                                                        <b><span id="day_id_value" style="font-size: 15px">01</span></b>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle day-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                <span class="data-dwn">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle year-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div style="margin-left: -10px; background-color: #D9EBE5; border-radius: 5px; width: 70px; height: 50px">
+                                                    <center style="padding-top: 11px;">
+                                                        <b><span id="year_id_value" style="font-size: 15px">2017</span></b>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <center>
+                                                <button type="button" class="btn btn-default btn-circle year-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                </button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </span>
+
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1">
+                               <span class="data-dwn">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 30px;">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div style="background-color: #D9EBE5; border-radius: 5px; width: 50px; height: 50px">
+                                                    <center style="padding-top: 7px;">
+                                                        <b><span style="font-size: 15px">__</span></b>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                           
+                                        </div>
+                                    </div>
+                                </span>
+
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                    <span class="data-dwn">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <center>
+                                                    <button type="button" class="btn btn-default btn-circle min-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                    </button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div style="background-color: #D9EBE5; border-radius: 5px; width: 50px; height: 50px">
+                                                        <center style="padding-top: 11px;">
+                                                            <b><span id="min_id_value" style="font-size: 15px">01</span></b>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <center>
+                                                    <button type="button" class="btn btn-default btn-circle min-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                    </button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1" style="padding-top: 30px; margin-left: -25px;">
+                                     <span class="data-dwn">
+                                        <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div style="background-color: #D9EBE5; border-radius: 5px; width: 30px; height: 50px">
+                                                        <center style="padding-top: 11px;">
+                                                            <b><span id="min_id_value" style="font-size: 15px">:</span></b>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: -44px;">
+                                <span class="data-dwn">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <center>
+                                                    <button type="button" class="btn btn-default btn-circle second-plus" data-type="plus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                    </button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div style="background-color: #D9EBE5; border-radius: 5px; width: 50px; height: 50px">
+                                                        <center style="padding-top: 11px;">
+                                                            <b><span id="second_id_value" style="font-size: 15px">01</span></b>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <center>
+                                                    <button type="button" class="btn btn-default btn-circle second-minus" data-type="minus" data-field="" style="color: #4CAF50; border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                    </button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </span>
+                            </div> 
+                          
+                        </div>
+                    </div>
+
+                    <div id="prime_data" style="display: none;">
+                       <div class="row" id="result_title" style="padding-bottom: 10px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img style="float: left;" alt="Prime" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsSAAALEgHS3X78AAABPElEQVRIx7XVsVHDMBTG8b98LtLBBngD2ABrA5cqkw08AmzACKHTFoINnJ47MgLcpUgnGsOZnGw9ycrr7LPv5+9ZelLee1JKWb0BNqTV2Rt3/r2oE8Fb4AjcJLx2AFrgD60Sv/gpB/TGff37eGl7ldUN8LkWTE26LwGKUWV1BzyWAEXtHRfPANyVAKVJ+5JgNOm4eAbBihWDkqQvpcHFpMrqFnClwRg6APcCNAb23rhheqOeAXsBSOSZb6C7BINJM+drCGxD4FzSblyxc9VEttAimDR7J504LqBRMPmUUVZvF8AD0MTA3KPt6sNBkjJ5r1YrU77nDId6RcpXb9w2Zz9VmSmzQREaSLkKlCadpnxeC0b/6UXKnTduT4GqhCmLgYvoJGVRMNbeHtDeuDcKV3DgK6sfgJM37oMr1A8QAqu9XlzxiAAAAABJRU5ErkJggg=="></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Prime Mode</b></span>
+                            </div>
+                       </div>
+                       <div class="row div_btm_border" id="result" style="margin-bottom: 2px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 16%;">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="result_div_box">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <h4 style="color: #4CAF50;padding-left: 20px;">MINUTES</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-bottom: 10px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px;"><b>
+                                                    <span id="prime_id_value" style="font-size: 75px;">1</span><span></span>
+                                                </b>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle prime-plus" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle prime-minus" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-9 col-md-9 col-sm-9">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="prime_start_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #4CAF50; margin-bottom: 20px; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-triangle-right"></span><span id="prime_start_spn" style="padding-left:10px;">Start</span>
+                                            </button> 
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <button id="prime_stop_btn" type="button" class="btn btn-default btn-lg" style="border-radius: 22.5px; color: #ffffff; background-color: #ff3232; float: right; padding-right: 40px;">
+                                            <span class="glyphicon glyphicon-stop"></span>
+                                            <span id="prime_stop_spn" style="padding-left:10px;">Stop</span>
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div id="chemical_data" style="display: none;">
+                       <div class="row" id="result_title" style="padding-bottom: 10px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img style="float: left;" alt="Chemical" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAnCAYAAABwtnr/AAAACXBIWXMAAAsSAAALEgHS3X78AAAC10lEQVRYw+2YP0wTURzHP9fSUi0e1cZCTJQCERcJ1QUSTUDdTI043mRNZJbBCRNFB1YxcdSIU1caL25oTRwcHEo0LiYiYgwSa9oLf0u95/JOTkILrS2l8X7L5e7d/X6f+753v75vFSEE9Rgu6jTqFryhGknVeLQNuGK79NbQ9NeVrKFUco2r8ehFYAQ4s8XwNPDQ0PRHewpcjUdvAzeBA9vcesfQ9Ht7AlyNR88Cz3cAbcXQvyqv1Gs7bChR2QgQqCJPxtD0VEUUV+PRADAMxIC2XRAzC4wD44amZ8oClwpP2oCzQKqK0BGg2daFYoVmoCC4VPqzTDQLjBqaPlFtudV4NAaMSrGyQHgr5Yv9ck5I6GkgshvQALJORIrVLJfNzhRX49EwMCNPT+30g6mw8gPAS3l6cLPqhRQflMdELaCl8kk523aebcGtllcTaFtMymP4/9gdenIET9+6fKJWcJ4uguveMsDdeSUIdNUK3J1Xgute4TggB9wBd8Ad8DoFFy6aSgXPAOQ9oqOW4Dmv6C20Z2oosrm5n/fQm24xu4PfXe/+JPMJ/8/Doi/vIQQQ+KFMNRnKgv3hRVWEjEOiz3Th964yE/rmerNVkXSL2b3i5yTAviXe2+ssHDH7hIuQNBPJUhzQBHBVESwH510jgbTyKecT/q/t5pjppn0jwcY4wPxR88KSKoaEwn7rHu8aL459dP9lCL4c/zWca+S8/VpTVnnQOueaygRFR7rVHJM57hqaPlqqdUsCPYpguXFFSeQ9oiPvwZq+V0A/gGKy0PnBfT3nE/65TvOxDXrW8qsWlPVyi83ihs1bhi2v2biqPFvziUvWmKHpkXLMckAum/5NQ08NTY9Jf/ikgFOPyRdPAj0FSkwDAxI8aTPKAAlpljMldxVD0zOGpg8A16TCdj9KER+aMjR9UhYdLmYUZI2UzVsmgHOGpg+W/feE08cdcAfcAS85fgPTFSgrrzYqzgAAAABJRU5ErkJggg=="></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Chemical Tank Levels</b></span>
+                            </div>
+                       </div>
+                       <div class="row" id="result" style="margin-bottom: -5px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 4%;">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="result_div_box">
+                                            <div class="row" style="padding-bottom: 10px; padding-top: 10px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px; margin-bottom: -17px;"><b>
+                                                    <span id="chemical_id_value" style="font-size: 75px;">{{data[13].data[0][1]}}</span><span style="font-size: 30px;">%</span>
+                                                </b>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%; display: none;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle chemical-plus_" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle chemical-minus_" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button></span>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 45px;">
+                                        <span style="float: right; font-size: 25px; padding-right: 105px;">
+                                            <b>Tank levels for last 7 days</b>
+                                        </span>    
+                                    </div>
+                            </div>
+                        </div>
+                       
+                        <div class="row" style="background: #F6F6F6; padding-top: 10px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Sun</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Mon</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Tues</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Wed</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Thurs</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Fri</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Sat</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row div_btm_border" style="background: #F6F6F6;">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 2%;">
+                                    <div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="sunChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[13].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="monChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[14].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="tuesChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[15].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv"id="wedChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[16].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="thursChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[17].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="friChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[18].data[0][1]}}%</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="satChemical"><span style="padding-top: 80px; padding-left: 30px; position: absolute;"><b>{{data[19].data[0][1]}}%</b></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+
+                    <div id="battery_data" style="display: none">
+                       <div class="row" id="result_title" style="padding-bottom: 10px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img style="float: left;" alt="Battery" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAdCAYAAAApQnX+AAAACXBIWXMAAAsSAAALEgHS3X78AAACw0lEQVRYw+2XTUhUURTHf+/Nuz6dEZzFDIJhikZgwcwEbnLhOKBQEWLYQgUhSBctEiFtEVRG0KYppK0UogsHRCzaqeEHmIsMzIKgoJpFligxgZrjc95r0Yx9+J4jTY4i/Zf3HO79cc65954jGYbBXpXMHpZitiiFAhVAhYnpoVE3OmO1mRQKOIFWE1PEqBvt/HNR0zQn4AMQQoxtCw7oBgpM1q2gE2oFrluAzxh1o2NxqJqort1SZVHyCyjfYtG+LJt6RQjxwTStUijgswAD8MWjYyVfMpumaZ3A4Pzql5Kbr3upmminaTpIb3iYLJtaHzP0l5qm+QAkswshhQI1FgellFZN02qAwcdzTzk/HSSiLf3m5HUW86T8juFQMpdtkpwvGYaBFAoUAjWAcycLfO50/6WV2Gp26ciFTWAJ+d1ehstvA9xQ4mDvd/rm+d1eXGoOTdNdlmAA4wsvmP36jmJHXr0SjxiNBVXcL23f8echvDKf1OfR3CRXSxoPy4lUpgNsu3KK7N15hAvsudsqgeX11TdphVvT17l2pHEjMmaqzivDk1OEQ8nsSytchqxw0J7LiD9oClidV8aD0stGVNc+AZ3KbtSUJ6eItyd76QkPEV6eJyfDgd/lpdztIaprn1VZnBJCRHYMTu66B/mF6CeqTe12m8rFQ2d+/rP6+grQr8qiVQgR2epvTUnS1Di2jjYA9I9rpj5CVqicaCNm6M9H/Xcr7WpWZM+1TJOLr5YSkUralUSjUQYGBlhcXNzk7HK5qK2tRVVVy1QmIrYRoQMZAKwPPcM46t3HzaaqqjQ0NPzVZnpzC3pzC9LUOMrZqh+FblFz+7NNT1XGcT+xjiDkF+49uESK9/X09R8uFbgIQE94KK0H94SHmFiYBbAemOir2Jghyt2etMHFwQCOWU10ienLB5xLMnf+a80A3VuNmt8Bd9L4ec9mSG8AAAAASUVORK5CYII="></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Battery Levels</b></span>
+                            </div>
+                       </div>
+                       <div class="row" id="result" style="margin-bottom: 0%;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 4%;">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="result_div_box">
+                                            <div class="row" style="padding-bottom: 10px; padding-top: 10px;">
+                                                <div class="col-lg-8 col-md-8 col-sm-8" style="padding-left: 35px; margin-top: -17px; margin-bottom: -17px"><b>
+                                                    <span id="battery_id_value" style="font-size: 75px;">{{data[13].data[0][1]}}</span><spanstyle="font-size: 30px;">volts</span>
+                                                </b>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="float: right; right: 3%; display: none;">
+                                                    <span class="input-group-btn data-dwn">
+                                                        <button type="button" class="btn btn-default btn-circle battery-plus_" data-type="plus" data-field="" style="border-radius: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-chevron-up"></i>
+                                                        </button><br>
+                                                        <button type="button" class="btn btn-default btn-circle battery-minus_" data-type="minus" data-field="" style="border-radius: 15px;"><i class="glyphicon glyphicon-chevron-down"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 45px;">
+                                        <span style="float: right; font-size: 25px; padding-right: 105px;">
+                                            <b>Battery levels for last 7 days</b>
+                                        </span>
+                                    </div>
+                            </div>
+                       </div>
+                       
+                       <div class="row" style="background: #F6F6F6; padding-top: 10px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Sun</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Mon</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Tues</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Wed</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Thurs</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Fri</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px; font-size: 16px;"><b>Sat</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" style="background: #F6F6F6;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[1].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[11].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[12].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[13].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[14].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[15].data[0][1]}}v</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                        <div style="padding-left: 40px"><b>{{data[16].data[0][1]}}v</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row div_btm_border" style="background: #F6F6F6;">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: -3px;">
+                                    <div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="sunBattery"><span class="spnForBattery"><b>{{data[1].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="monBattery"><span class="spnForBattery"><b>{{data[11].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="tuesBattery"><span class="spnForBattery"><b>{{data[12].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv"id="wedBattery"><span class="spnForBattery"><b>{{data[13].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="thursBattery"><span class="spnForBattery"><b>{{data[14].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="friBattery"><span class="spnForBattery"><b>{{data[15].data[0][1]}}v</b></span></div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div class="myDiv" id="satBattery"><span class="spnForBattery"><b>{{data[16].data[0][1]}}v</b></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="solar_data" style="display: none;">
+                       <div class="row" id="result_title" style="padding-bottom: 15px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h2><img style="float: left;" alt="Temp" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAnCAYAAABnlOo2AAAACXBIWXMAAAsSAAALEgHS3X78AAADc0lEQVRYw+WYMY+bWBDHf2/l7oq18gWWFK6XCF1tcEEbIlK4W77BbetqSRVd528QUpnC1rl2Ydg6skTqlU64ufZIcfW74uZFhLPXBtvb5EkI8/we/Dwz/5nBSmvNi421sgBLripGumguUS8CtFYuEAPDxjdbIGakk5cDWqsI+HRg1WdGOgK4ujBMcAQMwB1rFV/eQmtVAjctdry+uiCM3RIGILqky9wOe+xLAvW77LkkUNFlz08ENNIl8LnFji0jnfQuwbLYrCIgD+EesIHbA1u+AQFA74wQff4DuDeKYaQrKRtT4O4ZGNfUtbMlxsVmlchDH4FIVGaFjr+slZCgob4lkDDSlZnoqdSLpAIXQKHHWdmRKQaK0PGn4rIpkMhDkQKaHLqJYubGksQK8bctn3M5l3qcFS0sNQV+Ax5Dx3cXm5UNBKHjx8fsNzGU63EWLzYrFyjfP33s1+DuVeoZyKJmyeKZhPgVCAQmP8YyTSAzMoD5YILEgjG79f7pYymudYFAIMsaZK7HWRk6frTYrEwjlgOVuLMTUH0M5YY28CCQW4GcAv0v/zz9+ftf81eyZilnQscvF5tVAFwDUej41bFAhxKj1ci4N6IUC/jj118GX+eDSTYfTEoAlXqmPUXU9ea7ys4IVO2x3A9tg7g2qE+Gjt+6fFw1bqCAN4AHfACS0PFzcVUTdNtoNZYdW46dQHZNslO5cSVBS+j4lsB6wDuZTyTwvwHX88HEAmyVev1TgHqN3sUWlwxreeW1UZqAlLJ+CuSh4+dSNkzmDdrIvG0MUQO5EdA7kbEFZIvNSgN/C8T/4ugSQH3juobaSnGXGW/ng0l1qtuOAbL3NFu75oOa206KITOmImlTOhBLVHua+LzxNuqK26KucdRryH75vTrvKMRS64wbjQrtmije6nEWqNRLzmKhxWYVAw9y+WgsJPWp3qZUpkTscc9SpV6gx9nyVJc1M7I5R3IMGz/ApIShVPhK3LisxdPZgJrtabHj3wu7Nn9bSxN21xg69q3DPhDYP6QEydq5Sr3gVKD8mVyU7wHN94B2kv+pFhpKr7PdUf07ATVjqJQq3xx56PjFYrN63BFflsTLQ236Vo+zSqVe2V5tMzdm5uZaa859MHPvmblJmz3GQrZKvbildasj3t+rtj2SAbpumPysQ6Wefeyr1L/qFauvcIhq/gAAAABJRU5ErkJggg=="></h2><span style="float: left; padding-left: 15px; font-size: 25px"><b>Solar Production</b></span>
+                            </div>
+                       </div>
+                       <div class="row" id="result" style="margin-bottom: 20px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 4%;">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <div class="result_div_box">
+                                            <div class="row" style="padding-bottom: 10px; padding-top: 10px;">
+                                                <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 35px; margin-top: -17px; margin-bottom: -17px;"><b>
+                                                    <span id="solar_id_value" style="font-size: 75px;">{{data[13].data[0][1]}}</span><span style="font-size: 30px;">W/h</span>
+                                                </b>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="padding-left: 40px;">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <span><b>Generated Today</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>          
+                                    <div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 45px;">
+                                        <span style="float: right; font-size: 25px; padding-right: 105px;">
+                                            <b>W/h for last 7 days</b>
+                                        </span>
+                                </div>
+                            </div>
+                       </div>
+                       
+                       <div class="row" style="padding-top: 10px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px; font-size: 16px;"><b>Sun</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Mon</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Tues</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Wed</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Thurs</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Fri</b></div>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1" style="margin-left: 50px;">
+                                        <div style="padding-left: 0px font-size: 16px;"><b>Sat</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row div_btm_border"style="padding-top: 10px;">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 2%;">
+                                    <div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b id="sunDataSolar">0.00</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[18].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[19].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[20].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[21].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[22].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1" style="margin-right: 50px;">
+                                            <div style="margin-left: 15px; background-color: #F6F6F6; border-radius: 5px; width: 90px; height: 60px">
+                                                <center style="padding-top: 7px;">
+                                                    <span style="font-size: 35px; color: #4CAF50"><b>{{data[23].data[0][1]}}</b></span>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                       
+                    </div> 
+                   
+                    <div id="settings_data" style="display: none;">
+                        <div class="row" id="result_title" style="padding-bottom: 10px; padding-left: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <span style="float: left; padding-top: 15px; font-size: 25px"><b>Settings</b></span>
+                            </div>
+                        </div>
+                       
+                        <div class="row div_btm_border" style="padding-top: 102px;">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 6%;">
+                                    <div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div style="background-color: #F6F6F6; border-radius: 1px; width: 100%; height: 115px">
+                                                <div class="row" style="padding-left: 35px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2>
+                                                            <img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC">
+                                                        </h2>
+                                                     </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 25px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <center><span><b>Pump Mode</b></span></center>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div style="background-color: #F6F6F6; border-radius: 1px; width: 100%; height: 115px">
+                                                <div class="row" style="padding-left: 35px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2>
+                                                            <img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC">
+                                                        </h2>
+                                                     </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 25px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <center><span><b>Pump Setup</b></span></center>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div style="background-color: #F6F6F6; border-radius: 1px; width: 100%; height: 115px">
+                                                <div class="row" style="padding-left: 35px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2>
+                                                            <img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC">
+                                                        </h2>
+                                                     </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 25px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <center><span><b>Communication</b></span></center>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div style="background-color: #F6F6F6; border-radius: 1px; width: 100%; height: 115px">
+                                                <div class="row" style="padding-left: 35px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2>
+                                                            <img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC">
+                                                        </h2>
+                                                     </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 25px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <center><span><b>Sensors</b></span></center>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div style="background-color: #F6F6F6; border-radius: 1px; width: 100%; height: 115px">
+                                                <div class="row" style="padding-left: 35px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2>
+                                                            <img alt="Batch" class="img-responsive" style="float: left;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC">
+                                                        </h2>
+                                                     </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 25px;">
+                                                     <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <center><span><b>Charge Controller</b></span></center>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row div_btm_border">
+                        <div class="col-lg-3 col-md-3 col-sm-3 btmhover" id="auto" style="height: 105px;">
+                            <center style="margin-top: -5px;">
+                                <h2 class="div_command_color"><img alt="Auto" class="img-responsive" src=" data:image/png;base64,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"></h2>
+                                <h4>
+                                   Auto
+                                </h4>
+                            </center>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 btmhover" id="on_off" style="height: 105px;">
+                            <center>
+                                <h2 class="div_command_color"><img alt="On/Off" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAASCAYAAAA31qwVAAAACXBIWXMAAAsSAAALEgHS3X78AAAByElEQVRIx82WP0sbYRzHP3eQKUKSpQgRKjTgEuhtHUzJnW+gN3S4qV7fQZw6qpuTBF9AvWy3CLFd7OLdgQ4uJUImmzYRCUaH5jS5JR0el6OcVlHzROl3fP78+PD8+X5/ihCCpBTXyAI2YAJlJKTlCmRTU7fOdaIenagXAHXAEZYXXuNIgimuoQMO8HJcGP2FRmXuPe/y8/euPY7OcNo7bBxtnfweDT4Iy/P/AVNcwwY2ZU5opWizXFx89L6LPxH6boVGv/VRWJ7zF0xxDQ3wgcxzQyXhFnaXht/7P94Ky2uo8XhVBkrLFaSgADKpNJ/ffJqKWVDj0yrLXuEk9Dr7CnOmVFZcQ1Pj3yelhzz0h8rMlwB0VbaQliswSc2mpwGy0mB3+ZSsVP5TSYM1wtaTgXVkCoSjIcfR2cSA6t09gI4aZ9WFTDGnvTMxsC/d/QFQV+PwrEr5WNPhMPwpDbXarPFreLouLC9MZqUvY7RaroC/UCWTSo+1v9b+hn2wFgjL028+fhMIxv4E/RazXy2C88NHZ+Rqs4Z9sBYkzV65pR+rACuy2WnmS/f2Y/55g+3u/mV/NFgWlle9sx+7AagD+hPblZ/swZK6AiLDshsenzUfAAAAAElFTkSuQmCC"></h2>
+                                <h4 style="padding-top: 20px">
+                                    On/Off
+                                </h4>
+                            </center>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 btmhover" id="batch" style="height: 105px;">
+                            <center style="margin-top: -5px; margin-top: -5px;">
+                                <h2 class="div_command_color"><img alt="Batch" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAACXBIWXMAAAsSAAALEgHS3X78AAAE8klEQVRYw+1YbUwbZRz/dZQX12qPRYEMkpaA0cW5FnVpzFh6NTESpxtEE4l+oItZooZI9Yv9RpeYuCWL1qCJmS8cfmkT2cY+OGBJ184wM1wG10iibIW22RBKhF4HB0Kjjx+4O6/HFdrRkmD2S56k/T/PPfd7nv/7aQghyBImYcjBAuCwTdBmQdA9vTzXsvJP6pEoP4OyohJUle0BVawHVaIHgBAARhgFJa7JcLNUiJv4pnuy/zUmMoBkild92EzVwfnE63DUNgFAEoBTIL1tZC2u0Nng6d+8BrnQVmGWfkf5GcT4uPTfqKsEY3WBrrAAQA8AR8HJ+uMjhz8b/8H/4x/Xi0US7v0O8ebSEOVnwEQG4BnvlW6+2/qRuLYwhAkh4qDeuHZyAV6awEuTzl+7iRyj87eJzd9BOm52pckTKwvE5u8g4nPdk/3ilEe2d16G9OPDkS9/UXmhhEB8lMBLE5u/g6ih7fonBF6aGHqPkMjitCim80l2FwB4Y/4D305eOggAnfvbVNW+GTwN7TBTdUimeDiGT4lidz6tYBcAXJoePptM8ZKN3g+oEj08z7QDAK7OhhDlZwDABsCSV7KB+OizAO6bqAi6wiJFDSYyIIqb85YU7izN1k0t/6kVX7ZVNFc34upsCMFZVjqDahjy2d2yOQ6Ag7QGNkwq2unl+X1imDLpqjIu5FYXsyJrKa9fy8OJMABg6e+Vst1FpUqiDgCdikf7Mh0szQwAbEiUTYTlTpMVxNi7u6jUmiGNA8BFAC1i3sm6Nsh0c2wiDPqKE8kUD0OxDp6G9lxJJ6hzr9AZyLKkNdCn8dnFG6cBgLQGgqpkNRrMA0CIm9iUaPAFj6TmzczFTNWJe5QDCGR5toBAuoe0BtZ5+66De5782VCsWzOau0Npk+4xJieiANA3NZRmu0IIyxVtGp/dqWqzB6i6GfmLRDBWF2wV5qyJcquL0oHFyKLcU+mPGp89U2ijVMm+vNfaAwA9kUF5yAFVos+aqFwTRl0lHLVNSKb4ddpS4BiACzklBde+N13PP/rUXwDgGD6VdZhKU//dIXx+6xzkycUz3pvXoksKXe/WHz1uKNYhxsdBX3HmZGtMZEAKbceqD8FR24R7qaUJ9xhjByCOkFA6ymU9glwp27RExPk7P31l6D0iVU9q1ZeyPOy42SWVh+b+t0liZYFwq4uEEGJJK++8dBBe2q2QueGlgyoyolxLCEnvwVpqDr+j1z6098SNM6/G+DiOD5+Ge4xBc3UjLOX1UuJgE2EEZ1lcnLr2n/FVHwJjdYEq0ScbBk8YRl/6mi14w/hi1XNHL9Nn3vs+MvjpF7cvlMb4uGSLajDqKuFpaEdzTaPYPDrYRHh0OxtGADDNrdz7+Mb872+xXBjTy3Npk48/XAMLVY/Gx55GjI/DPcbIK6184CRpDbizJSuPd81CXSovy7iuW+ct30X6jWwi/IHwDUGeiezK+lxYI+9+HcKeToWsTY2sNosTcpna6/dHuoIAjEKOD8qqqnX5XeOzcwCiinU0AJOKbOPQtROwo8hq87SPR1CzXO3KMs8CwKRQswkApVhrKjRZFkBU/gEHQFClho0q5LQgV8qMhSTLKJykc13YWbvRoFwu9mEqMtsDB9tJDsYV0MG4XNLt5rnaZ6cE5zDn+RJVe7AtkZURtuSTaabudstkHzjY/4Hsv7lJXGWk7kD0AAAAAElFTkSuQmCC"></h2>
+                                <h4>
+                                   Batch
+                                </h4>
+                            </center>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 btmhover" id="prime" style="height: 105px;">
+                            <center style="padding-top: 10px; margin-top: -5px;">
+                                <h2 class="div_command_color"><img alt="Prime" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsSAAALEgHS3X78AAABPElEQVRIx7XVsVHDMBTG8b98LtLBBngD2ABrA5cqkw08AmzACKHTFoINnJ47MgLcpUgnGsOZnGw9ycrr7LPv5+9ZelLee1JKWb0BNqTV2Rt3/r2oE8Fb4AjcJLx2AFrgD60Sv/gpB/TGff37eGl7ldUN8LkWTE26LwGKUWV1BzyWAEXtHRfPANyVAKVJ+5JgNOm4eAbBihWDkqQvpcHFpMrqFnClwRg6APcCNAb23rhheqOeAXsBSOSZb6C7BINJM+drCGxD4FzSblyxc9VEttAimDR7J504LqBRMPmUUVZvF8AD0MTA3KPt6sNBkjJ5r1YrU77nDId6RcpXb9w2Zz9VmSmzQREaSLkKlCadpnxeC0b/6UXKnTduT4GqhCmLgYvoJGVRMNbeHtDeuDcKV3DgK6sfgJM37oMr1A8QAqu9XlzxiAAAAABJRU5ErkJggg=="></h2>
+                                <h4>
+                                   Prime
+                                </h4>
+                            </center>
+                        </div>
+                   </div>
+                    <div class="row" style="height: 70px; background: #F6F6F6;">
+                        <div id="settings" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 17px;">
+                            <h4 style="color: grey;"><span class="glyphicon glyphicon-cog"></span> Settings </h4>
+                        </div>
+                        <div id="settings" class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 17px;">
+                            <h4 style="color: grey; text-align: ;"> <span style="color: red; float: right;"><b id="msg_spn">{{data[24].data[0][1]}}</b></span> </h4>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 div_lft_border">
+                    <div class="row div_btm_border lfthover" id="chemical">
+                        <center style="float: right; margin-right: 50px;">
+                            <h2 class="div_command_color"><img alt="Chemical" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAnCAYAAABwtnr/AAAACXBIWXMAAAsSAAALEgHS3X78AAAC10lEQVRYw+2YP0wTURzHP9fSUi0e1cZCTJQCERcJ1QUSTUDdTI043mRNZJbBCRNFB1YxcdSIU1caL25oTRwcHEo0LiYiYgwSa9oLf0u95/JOTkILrS2l8X7L5e7d/X6f+753v75vFSEE9Rgu6jTqFryhGknVeLQNuGK79NbQ9NeVrKFUco2r8ehFYAQ4s8XwNPDQ0PRHewpcjUdvAzeBA9vcesfQ9Ht7AlyNR88Cz3cAbcXQvyqv1Gs7bChR2QgQqCJPxtD0VEUUV+PRADAMxIC2XRAzC4wD44amZ8oClwpP2oCzQKqK0BGg2daFYoVmoCC4VPqzTDQLjBqaPlFtudV4NAaMSrGyQHgr5Yv9ck5I6GkgshvQALJORIrVLJfNzhRX49EwMCNPT+30g6mw8gPAS3l6cLPqhRQflMdELaCl8kk523aebcGtllcTaFtMymP4/9gdenIET9+6fKJWcJ4uguveMsDdeSUIdNUK3J1Xgute4TggB9wBd8Ad8DoFFy6aSgXPAOQ9oqOW4Dmv6C20Z2oosrm5n/fQm24xu4PfXe/+JPMJ/8/Doi/vIQQQ+KFMNRnKgv3hRVWEjEOiz3Th964yE/rmerNVkXSL2b3i5yTAviXe2+ssHDH7hIuQNBPJUhzQBHBVESwH510jgbTyKecT/q/t5pjppn0jwcY4wPxR88KSKoaEwn7rHu8aL459dP9lCL4c/zWca+S8/VpTVnnQOueaygRFR7rVHJM57hqaPlqqdUsCPYpguXFFSeQ9oiPvwZq+V0A/gGKy0PnBfT3nE/65TvOxDXrW8qsWlPVyi83ihs1bhi2v2biqPFvziUvWmKHpkXLMckAum/5NQ08NTY9Jf/ikgFOPyRdPAj0FSkwDAxI8aTPKAAlpljMldxVD0zOGpg8A16TCdj9KER+aMjR9UhYdLmYUZI2UzVsmgHOGpg+W/feE08cdcAfcAS85fgPTFSgrrzYqzgAAAABJRU5ErkJggg=="><h4><span id="tank_level_percent_right">0</span>% FULL</h4></h2>
+                        </center>
+                    </div>
+                    <div class="row div_btm_border lfthover" id="battery">
+                        <center style="float: right; margin-right: 65px;">
+                            <h2 class="div_command_color"><img alt="Battery" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAdCAYAAAApQnX+AAAACXBIWXMAAAsSAAALEgHS3X78AAACw0lEQVRYw+2XTUhUURTHf+/Nuz6dEZzFDIJhikZgwcwEbnLhOKBQEWLYQgUhSBctEiFtEVRG0KYppK0UogsHRCzaqeEHmIsMzIKgoJpFligxgZrjc95r0Yx9+J4jTY4i/Zf3HO79cc65954jGYbBXpXMHpZitiiFAhVAhYnpoVE3OmO1mRQKOIFWE1PEqBvt/HNR0zQn4AMQQoxtCw7oBgpM1q2gE2oFrluAzxh1o2NxqJqort1SZVHyCyjfYtG+LJt6RQjxwTStUijgswAD8MWjYyVfMpumaZ3A4Pzql5Kbr3upmminaTpIb3iYLJtaHzP0l5qm+QAkswshhQI1FgellFZN02qAwcdzTzk/HSSiLf3m5HUW86T8juFQMpdtkpwvGYaBFAoUAjWAcycLfO50/6WV2Gp26ciFTWAJ+d1ehstvA9xQ4mDvd/rm+d1eXGoOTdNdlmAA4wsvmP36jmJHXr0SjxiNBVXcL23f8echvDKf1OfR3CRXSxoPy4lUpgNsu3KK7N15hAvsudsqgeX11TdphVvT17l2pHEjMmaqzivDk1OEQ8nsSytchqxw0J7LiD9oClidV8aD0stGVNc+AZ3KbtSUJ6eItyd76QkPEV6eJyfDgd/lpdztIaprn1VZnBJCRHYMTu66B/mF6CeqTe12m8rFQ2d+/rP6+grQr8qiVQgR2epvTUnS1Di2jjYA9I9rpj5CVqicaCNm6M9H/Xcr7WpWZM+1TJOLr5YSkUralUSjUQYGBlhcXNzk7HK5qK2tRVVVy1QmIrYRoQMZAKwPPcM46t3HzaaqqjQ0NPzVZnpzC3pzC9LUOMrZqh+FblFz+7NNT1XGcT+xjiDkF+49uESK9/X09R8uFbgIQE94KK0H94SHmFiYBbAemOir2Jghyt2etMHFwQCOWU10ienLB5xLMnf+a80A3VuNmt8Bd9L4ec9mSG8AAAAASUVORK5CYII="><h4><span id="battery_percent_right">0</span>V</h4></h2>
+                        </center>
+                    </div>
+                    <div class="row div_btm_border lfthover" id="temp_id">
+                        <center style="float: right; margin-right: 65px;">
+                            <h2 class="div_command_color"><img alt="Temp" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAAsSAAALEgHS3X78AAACFklEQVRYw+2ZPW7bQBCFPwYqA9g+gXUD+wbmdkllpWMX6wTyEXQE+wZMxy5MZXdL3UC+AXWCKEDKAJtCbwNiEcnib7XTCOK+N/sws9zBDBPnHENYUphPwOfg8YvL7Osg/vsKTQpzC5TA9RHIDli4zG777POhp8g5UEnkBjAus4nLbAIYPbsGKmE726xnRnLgAvjmMvvQXHCZrYA0KUwOfBU2nTyiitCdUvt4AvoozF2fqPZJvY9O6TK7PwbSWhlwJhXqo7M/A7sPONO+TFNaFBqFRqFRaBTaz2ZDOEkKkwL2yLKJqY9Co9AoNAr9r11OxOkuNCnMAljpb30GxWNW4o4vVJ1krr9LNW7vdaGlsAB5l260S0TX6uWfJaAC7k/g74UpxbmQj3YBajPSSQpzCfwEfqmjXDeOwHv2LHwtsVen2uy+Ef3Xy/sz14K7CrjpmKm/1W/VcZiQitv0Ner1VLfdqCGunux6CqYfY3N6CW2msI11PTKthfoXwQ9mdy24O3EWga/hryddUTWH4axRSfx+JvWLUm8lej526v1l/aRULs/gLIV9CnyMJ9RlNucw8r5pVBw/Bg9tozVfwW6AjXxM8jItgDdtvAXmLrMpcCVhRpUnVQXbCvvWOKOMekaDcpo36vxOUfP35FxvuP9a8gN4aFM2BxEa9PRrDvN8jqR/rY8P3fcZ8IPYDPgYPP7tMvtnCP9/AbAaqqSaOVTCAAAAAElFTkSuQmCC"><h4><span id="temp_percent_right">0</span>&#8457;</h4></h2>
+                        </center>
+                    </div>
+                    <div class="row lfthover" id="solar">
+                        <center style="float: right; margin-right: 20px;">
+                            <h2 class="div_command_color"><img alt="Solar" class="img-responsive" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAnCAYAAABnlOo2AAAACXBIWXMAAAsSAAALEgHS3X78AAADc0lEQVRYw+WYMY+bWBDHf2/l7oq18gWWFK6XCF1tcEEbIlK4W77BbetqSRVd528QUpnC1rl2Ydg6skTqlU64ufZIcfW74uZFhLPXBtvb5EkI8/we/Dwz/5nBSmvNi421sgBLripGumguUS8CtFYuEAPDxjdbIGakk5cDWqsI+HRg1WdGOgK4ujBMcAQMwB1rFV/eQmtVAjctdry+uiCM3RIGILqky9wOe+xLAvW77LkkUNFlz08ENNIl8LnFji0jnfQuwbLYrCIgD+EesIHbA1u+AQFA74wQff4DuDeKYaQrKRtT4O4ZGNfUtbMlxsVmlchDH4FIVGaFjr+slZCgob4lkDDSlZnoqdSLpAIXQKHHWdmRKQaK0PGn4rIpkMhDkQKaHLqJYubGksQK8bctn3M5l3qcFS0sNQV+Ax5Dx3cXm5UNBKHjx8fsNzGU63EWLzYrFyjfP33s1+DuVeoZyKJmyeKZhPgVCAQmP8YyTSAzMoD5YILEgjG79f7pYymudYFAIMsaZK7HWRk6frTYrEwjlgOVuLMTUH0M5YY28CCQW4GcAv0v/zz9+ftf81eyZilnQscvF5tVAFwDUej41bFAhxKj1ci4N6IUC/jj118GX+eDSTYfTEoAlXqmPUXU9ea7ys4IVO2x3A9tg7g2qE+Gjt+6fFw1bqCAN4AHfACS0PFzcVUTdNtoNZYdW46dQHZNslO5cSVBS+j4lsB6wDuZTyTwvwHX88HEAmyVev1TgHqN3sUWlwxreeW1UZqAlLJ+CuSh4+dSNkzmDdrIvG0MUQO5EdA7kbEFZIvNSgN/C8T/4ugSQH3juobaSnGXGW/ng0l1qtuOAbL3NFu75oOa206KITOmImlTOhBLVHua+LzxNuqK26KucdRryH75vTrvKMRS64wbjQrtmije6nEWqNRLzmKhxWYVAw9y+WgsJPWp3qZUpkTscc9SpV6gx9nyVJc1M7I5R3IMGz/ApIShVPhK3LisxdPZgJrtabHj3wu7Nn9bSxN21xg69q3DPhDYP6QEydq5Sr3gVKD8mVyU7wHN94B2kv+pFhpKr7PdUf07ATVjqJQq3xx56PjFYrN63BFflsTLQ236Vo+zSqVe2V5tMzdm5uZaa859MHPvmblJmz3GQrZKvbildasj3t+rtj2SAbpumPysQ6Wefeyr1L/qFauvcIhq/gAAAABJRU5ErkJggg=="><h4 style="color: #e50000"><span id="solar_percent_right">0</span>W</h4></h2>
+                            <h4>Charge Mode</h4>
+                            <form>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">BULK</label>
+                                </div>
+                                <div class="radio" style="padding-left: 23px">
+                                    <label><input type="radio" name="optradio">ABSORB</label>
+                                </div>
+                                <div class="radio" style="padding-left: 12px">
+                                    <label><input type="radio" name="optradio">FLOAT</label>
+                                </div> 
+                            </form>
+                        </center>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="bg_load">
+               <img class="img-responsive" alt="Splash" src=" data:image/png;base64,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LCW78GCp5X1CWn2vVve56DVWzbldp/d0x6/VPUTEfUAylXzL7ex2n5Be49dpGzrt307HS7dj5kiL58l/y/zT0EfDR1qEiICJyrRVkFo9Lg4wd2XavNPEcrvu+4B0OyjE4+IGivPDM7I3sdMJJn7udn+R5kLkovEhTr59Yt9jD3/aws3ctw0FSHM8mjXfNb1TTNsdlK1OCiIiIno9iZsYZyr5huVrw1qg67yHwyKKEPfA54siOmOmQ+ew8OAGV/l8RYki5MgnpndLep/l8bg/hrh+Zt/dvlsl5O4CZH54BplKHvlqAdHjBjTFI9fHbn5tq58PUmluVYv4LHMTJ7x+RHwn4H1LRfVnG9nKVsvio9d49PKcdtvJAoSIiOjNYdplfJ79CongGOaGPnIW/dlDzplv8DL+7ls1+8ATtp9V1Bd27sdxhwXIa+AXr+NG19e3br1km1dRkQiOIW8VsbrTe1tRtWZjcfNrTAbH5euvZb984SfoVrXYseggIiIiep5CxN2G/rJWAhVSrtsbvGirj+6ypfw1cuTtWERERERE9NdBtGO9xVAQEREREdHLxCKEiIiIiIhYhBAREREREYsQIiIiIiIiFiFERERERMQihIiIiIiIiEUIERERERGxCCEiIiIiIhYhRERERERELEKIiIiIiIhFCBEREREREYsQIiIiIiJiEUJERERERMQihIiIiIiIWIQQERERERGLECIiIiIiIhYhRERERETEIoSIiIiIiIhFCBERERERsQghIiIiIiJiEUJERERERCxCiIiIiIiIRQgRERERERGLECIiIiIiYhFCRERERETEIoSIiIiIiFiEEBERERERixAiIiIiIiIWIURERERExCKEiIiIiIjouf3i3//uX39gGIiok4c/basn3w7ZjAQRtXN+cOynbx7dfZuRIKJOTh0PfwEA/w9jpXDNMobNMgAAAABJRU5ErkJggg==" width="100%" height="100%">
+        </div>
+   
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+
+            
+        });
+
+    </script>
+    </body>
+</html>
+
